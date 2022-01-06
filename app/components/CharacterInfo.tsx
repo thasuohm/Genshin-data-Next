@@ -131,7 +131,7 @@ const CharacterInfo = ({ characterName }: CharacterInfo) => {
     setCombat1(talents.combat1);
     setCombat2(talents.combat2);
     setCombat3(talents.combat3);
-    console.log(genshindb.talents("fischl"));
+
     setPassive({
       passive1: talents.passive1,
       passive2: talents.passive2,
