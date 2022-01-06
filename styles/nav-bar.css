@@ -1,0 +1,54 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-secondary);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 0.5em 1em;
+  font-size: var(--f-mini);
+}
+
+.genshin-logo {
+  width: 10em;
+}
+.genshin-logo:hover {
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.right-nav > div {
+  padding: 0.5em 1em;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.left-nav .menu-nav {
+  transition: 0.3s;
+  padding: 0.25em 0.5em;
+  border: 1px solid transparent;
+}
+
+@media (min-width: 720px) {
+  .nav-container {
+    font-size: var(--f-normal);
+  }
+  .left-nav .menu-nav {
+    display: none;
+  }
+}
+
+.right-nav > div:hover,
+.left-nav .menu-nav:hover {
+  cursor: pointer;
+  background: var(--clr-third);
+  border-color: var(--clr-fourth);
+  border-radius: 20px;
+}

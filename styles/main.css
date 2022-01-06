@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+:root {
+  --clr-primary: #0d1117;
+  --clr-secondary: #161b22;
+  --clr-third: #21262d;
+  --clr-fourth: #c9d1d9;
+  --clr-white: #f0f6fc;
+  --clr-blue: #38a6ff;
+  --clr-red: tomato;
+  --clr-green: #04aa6d;
+  --clr-font: #c9d1d9;
+  --f-family-primary: "Work Sans", sans-serif;
+  --f-family-secondary: "Varela Round", sans-serif;
+  --f-mini: 13px;
+  --f-normal: 16px;
+  --f-title: 20px;
+  --f-header: 24px;
+
+  --f-normal: 500;
+  --f-thick: 600;
+  --f-bold: 900;
+
+  --opacity-many: 0.8;
+}
+
+body {
+  background-color: var(--clr-primary);
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  font-family: var(--f-family-primary);
+  color: var(--clr-font);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.main-container {
+  background-color: var(--clr-third);
+  margin-top: 5rem;
+  width: 100%;
+  max-width: 2000px;
+}
+
+@media (min-width: 720px) {
+  .main-container {
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 5.5rem;
+  }
+}
+
+.flex-row {
+  display: flex;
+
+  height: 100%;
+}

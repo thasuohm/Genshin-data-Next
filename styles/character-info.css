@@ -1,0 +1,271 @@
+.character__container {
+  padding: 1em;
+  margin-bottom: 5rem;
+}
+
+.info:nth-child(1) {
+  grid-area: image;
+}
+
+.info:nth-child(2) {
+  grid-area: info;
+}
+.info:nth-child(3) {
+  grid-area: stat;
+}
+
+.info:nth-child(4) {
+  grid-area: ascension;
+}
+
+.info:nth-child(5) {
+  grid-area: other;
+}
+
+.info:nth-child(6) {
+  grid-area: constellation;
+}
+
+.info:nth-child(7) {
+  grid-area: talent;
+}
+.info:nth-child(8) {
+  grid-area: combat2;
+}
+
+.info:nth-child(9) {
+  grid-area: combat3;
+}
+
+.info:nth-child(10) {
+  grid-area: passive;
+}
+
+.character-info {
+  display: grid;
+  grid-template-areas: "image" "info" "stat" "ascension" "other" "constellation" "talent" "combat2" "combat3" "passive";
+}
+
+@media (min-width: 960px) {
+  .character-info {
+    margin: 0 2rem;
+    grid-auto-columns: 1fr;
+    gap: 1.5rem;
+    grid-template-areas:
+      "image info"
+      "stat stat"
+      "ascension other"
+      "ascension constellation"
+      "talent talent"
+      "combat2 combat2"
+      "combat3 combat3"
+      "passive passive";
+  }
+}
+
+.character__name {
+  padding: 0.5em 0;
+  letter-spacing: 0.25rem;
+  background-color: var(--clr-primary);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.character-info__img {
+  width: 100%;
+  max-height: 720px;
+  max-width: 100%;
+  background-repeat: no-repeat;
+}
+
+.info-table,
+.center {
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.info-table tr td:first-child {
+  text-align: center;
+}
+
+.info-table tr td {
+  padding: 0.25em 0.75em;
+}
+
+.info-table tr,
+.talent-table tr {
+  background-color: var(--clr-primary);
+}
+
+.info-table h4 {
+  display: inline-block;
+}
+
+.info-table tr:nth-child(even),
+.talent-table tr:nth-child(even) {
+  background-color: var(--clr-secondary);
+}
+
+.icon__img__container {
+  width: 3em;
+  height: 3em;
+}
+
+.content-container,
+.other-info {
+  background-color: var(--clr-primary);
+  padding: 1em;
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
+.stat-input__container {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.stat-input__input {
+  width: 95%;
+  margin: 1.5em 0;
+}
+
+.stat-result > * {
+  width: 95%;
+  margin: 1.25em auto;
+  text-align: left;
+}
+
+.stat-title {
+  margin-bottom: 0.5em;
+}
+
+.stat-result__bar {
+  height: 0.75em;
+  border-radius: 10px;
+  background-color: var(--clr-secondary);
+  position: relative;
+}
+
+.stat-result__power {
+  height: 100%;
+  background-color: var(--clr-primary);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+}
+
+.stat-result__power--atk {
+  background-color: var(--clr-red);
+}
+
+.stat-result__power--hp {
+  background-color: var(--clr-green);
+}
+
+.stat-result__power--def {
+  background-color: var(--clr-blue);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.info-container {
+  background-color: var(--clr-secondary);
+  width: 90%;
+  border-radius: 10px;
+  margin: 1em auto;
+  padding: 1em;
+}
+
+.ascension-header {
+  font-size: var(--f-title);
+  border-style: solid;
+  border-color: var(--clr-primary);
+  padding-bottom: 0.25em;
+  border-width: 0 0 0.25em 0;
+}
+
+.content-block {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em 0;
+}
+
+@media (min-width: 900px) {
+  .other-info .info-container {
+    width: 75%;
+  }
+  .other-info .content-block {
+    margin: 1.25em auto;
+  }
+
+  .other-info .info-container {
+    padding: 0.1em 1em;
+  }
+}
+
+.fandom-info a:hover {
+  text-decoration: none;
+}
+
+.element .icon__img__container {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  margin-left: 1em;
+}
+
+.icon__img__container {
+  display: inline-block;
+}
+
+.weapon .icon__img__container {
+  vertical-align: middle;
+  margin-left: 0.5em;
+  width: 2em;
+  height: 2em;
+}
+
+.other-info__img {
+  margin: -2em auto 1.5em auto;
+}
+
+.constellation__icon {
+  width: 7.5em;
+  height: auto;
+  vertical-align: middle;
+  align-self: center;
+  margin-right: 1em;
+}
+
+.constellation__effect {
+  line-height: 1.6em;
+}
+
+.constellation__items .info-container {
+  padding: 0.25em 1em;
+}
+
+.constellation__items .content-block {
+  justify-content: start;
+  align-items: top;
+}
+
+.content-container + .talent-blog {
+  overflow-x: scroll;
+}
+
+.talent-table {
+  width: 100%;
+  font-size: var(--f-mini);
+}
+
+.talent-table tr td {
+  padding: 1em 0.5em;
+}

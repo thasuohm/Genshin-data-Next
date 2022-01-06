@@ -1,0 +1,71 @@
+.container {
+  margin: 0 auto;
+  padding: 1em 0;
+  width: 90%;
+}
+
+.dashboard-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 1em 0;
+  background-color: var(--clr-secondary);
+}
+
+.filter__element,
+.filter__weapon {
+  width: 50%;
+  display: flex;
+}
+
+.character-card__container {
+  display: grid;
+  width: 100%;
+
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 15rem));
+  gap: 3rem 1.5rem;
+}
+
+.filter__element input,
+.filter__weapon input {
+  display: none;
+}
+
+.filter__icon {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+@media (min-width: 1200px) {
+  .dashboard-filter {
+    flex-direction: row;
+  }
+  .filter__icon {
+    width: 3.5em;
+    height: 3.5em;
+  }
+}
+
+.filter__item:hover {
+  cursor: pointer;
+}
+
+.filter__item {
+  position: relative;
+}
+
+.filter__item:hover::before {
+  content: attr(data-info);
+  position: absolute;
+  left: 0;
+  bottom: -2.5em;
+  padding: 0.5em 1em;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--clr-primary);
+  z-index: 2;
+}
+
+.filter__input:checked + div {
+  border-style: solid;
+}
