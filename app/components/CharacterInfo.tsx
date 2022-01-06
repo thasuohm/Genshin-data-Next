@@ -127,6 +127,7 @@ const CharacterInfo = ({ characterName }: CharacterInfo) => {
     const genshindb = require("genshin-db");
     setCharacterInfo(genshindb.characters(characterName));
     setConstellation(genshindb.constellations(characterName));
+    console.log(characterName);
     const talents = genshindb.talents(characterName);
     setCombat1(talents.combat1);
     setCombat2(talents.combat2);
@@ -136,7 +137,7 @@ const CharacterInfo = ({ characterName }: CharacterInfo) => {
       passive2: talents.passive2,
       passive3: talents.passive3,
     });
-    console.log(currentElement.url);
+
     return () => {
       setCharacterInfo(cleanChar);
     };
