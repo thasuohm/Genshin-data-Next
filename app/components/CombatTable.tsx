@@ -21,21 +21,26 @@ const CombatTable = ({ combatType }: CombatTableType) => {
         </thead>
         <tbody>
           {combatType.attributes.labels.map((combat, i) => {
-            let current = "param" + (i + 1);
+            let current = combat.slice(
+              combat.indexOf("param"),
+              combat.indexOf(":")
+            );
+
             return (
               <tr key={`${combatType.name}${current}${i}`}>
                 <td>{combat.slice(0, combat.indexOf("|"))}</td>
-                {combatType.attributes.parameters[current].map(
-                  (result: number, j: number) => {
-                    return (
-                      <td key={`${combatType.name}${current}result${j}`}>
-                        {result % 1 === 0
-                          ? result
-                          : (result * 100).toFixed(2) + "%"}
-                      </td>
-                    );
-                  }
-                )}
+                {combatType.attributes.parameters[current] &&
+                  combatType.attributes.parameters[current].map(
+                    (result: number, j: number) => {
+                      return (
+                        <td key={`${combatType.name}${current}result${j}`}>
+                          {result % 1 === 0
+                            ? result
+                            : (result * 100).toFixed(2) + "%"}
+                        </td>
+                      );
+                    }
+                  )}
               </tr>
             );
           })}

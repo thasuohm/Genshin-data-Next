@@ -127,11 +127,11 @@ const CharacterInfo = ({ characterName }: CharacterInfo) => {
     const genshindb = require("genshin-db");
     setCharacterInfo(genshindb.characters(characterName));
     setConstellation(genshindb.constellations(characterName));
-    console.log(characterName);
     const talents = genshindb.talents(characterName);
     setCombat1(talents.combat1);
     setCombat2(talents.combat2);
     setCombat3(talents.combat3);
+    console.log(genshindb.talents("fischl"));
     setPassive({
       passive1: talents.passive1,
       passive2: talents.passive2,
