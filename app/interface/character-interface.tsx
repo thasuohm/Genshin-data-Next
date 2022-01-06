@@ -37,7 +37,7 @@ export interface characterInfo {
   substat: string;
   stats: Function;
   images: {
-    icon?: string;
+    icon: string;
     cover1: string;
     cover2: string;
     sideicon: string;

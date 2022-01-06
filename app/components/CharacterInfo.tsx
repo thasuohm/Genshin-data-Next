@@ -44,6 +44,7 @@ const CharacterInfo = ({ characterName }: CharacterInfo) => {
       substat: "",
       stats: () => {},
       images: {
+        icon: "",
         cover1: "",
         cover2: "",
         sideicon: "",

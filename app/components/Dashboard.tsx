@@ -191,7 +191,7 @@ const Dashboard = () => {
             return (
               <label key={element} data-info={element} className="filter__item">
                 <input
-                  id={element}
+                  id={`filter${element}`}
                   title="element"
                   type="checkbox"
                   value={element}
@@ -218,7 +218,7 @@ const Dashboard = () => {
             return (
               <label key={weapon} data-info={weapon} className="filter__item">
                 <input
-                  id={weapon}
+                  id={`filter${weapon}`}
                   type="checkbox"
                   value={weapon}
                   className="filter__input"
